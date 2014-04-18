@@ -1,0 +1,27 @@
+<%= form_for :entries, url: entries_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.label :ingredients %><br>
+    <%= f.text_area :ingredients %>
+  </p>
+
+  <p>
+    <%= f.label :instructions %><br>
+    <%= f.text_area :instructions %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', entries_path %>
