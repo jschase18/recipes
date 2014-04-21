@@ -1,21 +1,18 @@
-<h1>Hello everyone:</h1>
- 
- <%= link_to 'Make a new Recipe', new_entry_path %>
- 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Ingredients</th>
-    <th>Instructions</th>
-  </tr>
- 
+<h1 class="text-center">The Recipe Repo</h1>
+<!-- <h2 class="text-center">If we are what we eat, then I am cheap, fast, and easy (and greasy) </h2> -->
+<h2 class="text-center"><em>Even better than Git Hub!</em></h2>
+ <div class="text-center">
+ <%= link_to 'Make a New Recipe', new_entry_path %>
+</div><br/>
+<div class="list">
   <% @entries.each do |entry| %>
-    <tr>
-      <td><%= entry.name %></td>
-      <td><%= entry.description %></td>
-      <td><%= entry.ingredients %></td>
-      <td><%= entry.instructions %></td>
-    </tr>
+	<div class="entry center">
+    <p>
+      <label><b>Recipe Name: </b></label><%= link_to entry.name, entry_path(entry) %>
+    </p>
+	<p>
+		<label><b>Description: </b></label><%= entry.description %>
+	</p>
+	</div>
   <% end %>
-</table>
+</div>

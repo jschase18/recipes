@@ -1,21 +1,24 @@
-<p>
-  <strong>Name:</strong>
-  <%= @entry.name %>
-</p>
- 
-<p>
-  <strong>Description:</strong>
-  <%= @entry.description %>
-</p>
+<h1 class="text-center"><%= @entry.name %></h1>
 
-<p>
-  <strong>Ingredients:</strong>
-  <%= @entry.ingredients %>
-</p>
+<div class="entry center"> 
+	<p>
+	  <h3><strong>Description:</strong></h3>
+	  <%= @entry.description %>
+	</p>
 
-<p>
-  <strong>Instructions:</strong>
-  <%= @entry.instructions %>
-</p>
+	<hr/>
+	<p>
+	  <h3><strong>Ingredients:</strong></h3>
+	  <%= @entry.ingredients %>
+	</p>
 
-<%= link_to 'Back', entries_path %>
+	<hr/>
+	<p>
+	  <h3><strong>Instructions:</strong></h3>
+	  <%= @entry.instructions %>
+	</p>
+</div>
+
+<div class="text-center">
+	<%= link_to 'Home', entries_path %>
+</div>
