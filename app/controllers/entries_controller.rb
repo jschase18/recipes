@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
 	def new
+		@entry = Entry.new
 	end
 	
 	def show
@@ -8,9 +9,14 @@ class EntriesController < ApplicationController
 	
 	def create
 		@entry = Entry.new(entry_params)
+		
+		print (:name);
 
-		@entry.save
-		redirect_to @entry
+		if @entry.save
+			redirect_to @entry
+		else
+			render 'new'
+		end
 	end
 	
 	def index

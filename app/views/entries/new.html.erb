@@ -1,7 +1,7 @@
 <h1 class="text-center">Make a New Recipe</h1>
 
 <div class="entry center">
-	<%= form_for :entries, url: entries_path do |f| %>
+<%= form_for :entries, url: entries_path do |f| %>
 		<p>
 			<%= f.label :name %><br>
 			<%= f.text_field :name %>
@@ -21,11 +21,24 @@
 			<%= f.label :instructions %><br>
 			<%= f.text_area :instructions %>
 		</p>
+		
+<% if @entry.errors.any? %>
+	<div id="error_explanation">
+    <h3><%= pluralize(@entry.errors.count, "error") %> prohibited
+      this recipe from being saved:</h3>
+    <ul>
+    <% @entry.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 
 		<p>
 			<%= f.submit %>
 		</p>
 	<% end %>
+	
 </div>
 
 <div class="text-center">
