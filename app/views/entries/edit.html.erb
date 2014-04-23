@@ -36,7 +36,7 @@
 
 		<div>
 			<%= f.submit %> 
-			<%= button_tag 'Cancel', :type => 'button', :class => 'cancel', :onclick => "location.href = '#{entry_path(@entry)}'" %>
+			<%= button_tag 'Cancel', :type => 'button', :class => 'cancel', :onclick => "if(confirm('Are you sure you want to cancel changes?')) { location.href = '#{entry_path(@entry)}' } else { return false; }" %>
 		</div>
 	<% end %>
 	
