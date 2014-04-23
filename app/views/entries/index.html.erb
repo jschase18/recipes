@@ -1,6 +1,13 @@
 <h1 class="text-center">The Recipe Repo</h1>
 <!-- <h2 class="text-center">If we are what we eat, then I am cheap, fast, and easy (and greasy) </h2> -->
-<h2 class="text-center"><em>Even better than Git Hub!</em></h2>
+<h2 class="text-center"><em>
+<%= headers = ["If we are what we eat, then I am cheap, fast, and easy (and greasy)",
+"Even better than Git Hub!",
+"If I had a snarky comment, it would go here!",
+"Committing changes has never been so delicious!"]
+headers[rand(4)]  %>
+</em></h2>
+
  <div class="text-center">
  <%= link_to 'Make a New Recipe', new_entry_path %>
 </div><br/>
@@ -8,7 +15,7 @@
   <% @entries.each do |entry| %>
 	<div class="entry center">
     <p>
-      <label><b>Recipe Name: </b></label><%= link_to entry.name, entry_path(entry) %>
+      <label><b>Recipe Name: </b></label><em><%= entry.name %></em>
     </p>
 	<p>
 		<label><b>Description: </b></label><%= entry.description %>
