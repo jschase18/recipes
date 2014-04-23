@@ -1,4 +1,7 @@
 class EntriesController < ApplicationController
+
+	http_basic_authenticate_with name: "recipesadmin", password: "verysecretpassword", except: [:index, :show]
+
 	def new
 		@entry = Entry.new
 	end
