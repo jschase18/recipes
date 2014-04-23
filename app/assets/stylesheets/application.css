@@ -23,6 +23,10 @@
 
  }
  
+ #intro {
+	width: 75%;
+ }
+ 
  .entry {
 	padding: 10px;
 	border: 1px solid black;
