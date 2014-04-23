@@ -4,7 +4,7 @@ New file.
 Allows the entry of new recipes by users.
 -->
 
-<h3 class="text-center">Make a New Recipe</h1>
+<h3 class="text-center">Add a New Recipe</h1>
 
 <div class="entry center">
 <%= form_for :entries, url: entries_path do |f| %>
@@ -41,8 +41,9 @@ Allows the entry of new recipes by users.
 		<% end %>
 
 		<div>
-			<%= f.submit %> 
-			<%= button_tag 'Cancel', :type => 'button', :class => 'cancel', :onclick => "if(confirm('Are you sure you want to cancel changes?')) { location.href = '#{entries_path()}' } else { return false; }" %>
+			<%= button_tag 'Cancel', :type => 'button', :class => 'cancel float-right', :onclick => "if(confirm('Are you sure you want to cancel changes?')) { location.href = '#{entries_path()}' } else { return false; }" %>
+			<%= f.submit "Save Recipe", :class => 'float-right' %> 
+			<br/>
 		</div>
 	<% end %>
 	

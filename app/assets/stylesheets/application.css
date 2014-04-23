@@ -28,9 +28,13 @@
 	margin-top: 0px;
  }
  
+ h3 {
+	margin-bottom: 3px;
+ }
+ 
  textarea,
  input[type="text"] {
-	width: 98%;
+	width: 99%;
 	color: red;
  }
 
@@ -40,6 +44,7 @@
 	font-weight: bold;
 	background-color: green;
 	color: white;
+	margin-right: 5px;
  }
 
  input[type="button"]:hover,
@@ -78,6 +83,7 @@
 	font-weight: bold;
 	background-color: red;
 	color: white;
+	margin-right: 5px;
  }
  
  .cancel:hover {
@@ -90,6 +96,13 @@
 	text-decoration:none;
  }
 
+ .float-right {
+	float: right;
+ }
+ 
+ .half-width {
+	width: 50%;
+ }
  
  /* IDs */ 
  #intro {

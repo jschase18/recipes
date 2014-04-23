@@ -41,8 +41,9 @@ Allows editing of entry with the right basic authentication.
 		<% end %>
 
 		<div>
-			<%= f.submit %> 
-			<%= button_tag 'Cancel', :type => 'button', :class => 'cancel', :onclick => "if(confirm('Are you sure you want to cancel changes?')) { location.href = '#{entry_path(@entry)}' } else { return false; }" %>
+			<%= button_tag 'Cancel', :type => 'button', :class => 'cancel float-right', :onclick => "if(confirm('Are you sure you want to cancel changes?')) { location.href = '#{entry_path(@entry)}' } else { return false; }" %>
+			<%= f.submit "Update Recipe", :class => 'float-right'%>
+			<br/>
 		</div>
 	<% end %>
 	
