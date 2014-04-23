@@ -1,11 +1,11 @@
 <h1 class="text-center">The Recipe Repo</h1>
 <!-- <h2 class="text-center">If we are what we eat, then I am cheap, fast, and easy (and greasy) </h2> -->
 <h2 class="text-center"><em>
-<%= headers = ["If we are what we eat, then I am cheap, fast, and easy (and greasy)",
+<%= headers = ["If we are what we eat, then I am cheap, fast, and easy (and greasy)!",
 "Even better than Git Hub!",
 "If I had a snarky comment, it would go here!",
 "Committing changes has never been so delicious!"]
-headers[rand(4)]  %>
+headers[rand(headers.length)]  %>
 </em></h2>
 
  <div class="text-center">
@@ -20,6 +20,7 @@ headers[rand(4)]  %>
 	<p>
 		<label><b>Description: </b></label><%= entry.description %>
 	</p>
+
 	<p class="links">
 		<%= link_to "Show me this Recipe...", entry_path(entry) %>
 	</p>
