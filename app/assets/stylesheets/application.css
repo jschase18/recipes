@@ -19,12 +19,20 @@
 	font-size: 20px;
  }
  
+ h1 {
+	margin-bottom: 0px;
+ }
+ 
+ h2 {
+	margin-top: 0px;
+ }
+ 
  .list {
 
  }
  
  #intro {
-	width: 75%;
+	width: 50%;
  }
  
  .entry {
