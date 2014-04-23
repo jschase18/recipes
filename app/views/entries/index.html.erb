@@ -15,7 +15,7 @@ headers[rand(4)]  %>
   <% @entries.each do |entry| %>
 	<div class="entry center">
     <p>
-      <label><b>Recipe Name: </b></label><em><%= entry.name %></em>
+      <label><b>Recipe Name: </b></label><em><%= entry.name %></em> <%= link_to 'Edit', edit_entry_path(entry) %>
     </p>
 	<p>
 		<label><b>Description: </b></label><%= entry.description %>
