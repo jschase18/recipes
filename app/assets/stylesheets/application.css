@@ -30,7 +30,7 @@
  
  textarea,
  input[type="text"] {
-	width: 100%;
+	width: 98%;
 	color: red;
  }
 
@@ -72,21 +72,20 @@
 	font-size: 16px;
 	font-weight: bold;
  }
-
+ 
  .cancel {
-	background-color: red !important;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: red;
+	color: white;
  }
  
  .cancel:hover {
-	background-color: white !important;
-	color: red !important;
+	background-color: white;
+	color: red;
  }
  
  /* IDs */ 
- #save {
-	display: inline;
- }
-  
  #intro {
 	width: 50%;
  }
