@@ -34,13 +34,14 @@
   </div>
 <% end %>
 
-		<p>
-			<%= f.submit %>
-		</p>
+		<div id="save">
+			<%= f.submit %> 
+			<%= button_to 'Cancel', entry_path(@entry), data: { confirm: 'Are you sure you want to cancel? Any changes made will not be saved.' }, class: 'cancel' %>
+		</div>
 	<% end %>
 	
 </div>
 
 <div class="text-center">
-<%= link_to 'Home', entries_path %>
+	<span class="links"><%= link_to 'Go back to Home', entries_path %></span>
 </div>
