@@ -43,6 +43,10 @@
 	font-weight: bold;
 }
 
+a:hover {
+	cursor: pointer;
+}
+
 textarea,
 input[type="text"] {
 	width: 100%;

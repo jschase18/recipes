@@ -20,6 +20,6 @@
 </div>
 
 <div class="text-center">
-	<span class="links"><%= link_to 'Go back to Home', entries_path %> | <%= link_to 'Edit', edit_entry_path(@entry) %> | <%= link_to 'Delete this Recipe', entry_path(@entry),
+	<span class="links"><%= link_to 'Go back to Home', entries_path %> | <%= link_to 'Edit this Recipe', edit_entry_path(@entry) %> | <%= link_to 'Delete this Recipe', entry_path(@entry),
                     method: :delete, data: { confirm: 'Are you sure?' } %></span>
 </div>
