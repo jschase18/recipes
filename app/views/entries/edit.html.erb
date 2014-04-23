@@ -23,20 +23,20 @@
 			<%= f.text_area(:instructions, :value => @entry.instructions) %>
 		</p>
 		
-<% if @entry.errors.any? %>
-	<div id="error_explanation">
-    <h3><%= pluralize(@entry.errors.count, "error") %> prohibited this recipe from being saved:</h3>
-    <ul>
-    <% @entry.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
+		<% if @entry.errors.any? %>
+			<div id="error_explanation">
+				<h3><%= pluralize(@entry.errors.count, "error") %> prohibited this recipe from being saved:</h3>
+				<ul>
+					<% @entry.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
 
-		<div id="save">
+		<div>
 			<%= f.submit %> 
-			<%= button_to 'Cancel', entry_path(@entry), data: { confirm: 'Are you sure you want to cancel? Any changes made will not be saved.' }, class: 'cancel' %>
+			<%= button_tag 'Cancel', :type => 'button', :class => 'cancel', :onclick => "location.href = '#{entry_path(@entry)}'" %>
 		</div>
 	<% end %>
 	

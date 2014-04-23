@@ -22,21 +22,22 @@
 			<%= f.text_area :instructions %>
 		</p>
 		
-<% if @entry.errors.any? %>
-	<div id="error_explanation">
-    <h3><%= pluralize(@entry.errors.count, "error") %> prohibited
-      this recipe from being saved:</h3>
-    <ul>
-    <% @entry.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
+		<% if @entry.errors.any? %>
+			<div id="error_explanation">
+				<h3><%= pluralize(@entry.errors.count, "error") %> prohibited
+				  this recipe from being saved:</h3>
+				<ul>
+					<% @entry.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
 
-		<p>
+		<div>
 			<%= f.submit %>
-		</p>
+			<%= button_tag 'Cancel', :type => 'button', :class => 'cancel', :onclick => "location.href = '#{entries_path()}'" %>
+		</div>
 	<% end %>
 	
 </div>
