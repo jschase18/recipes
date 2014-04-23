@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
 
 	# Allows a very basic authentication scheme.
-	http_basic_authenticate_with name: "admin", password: "admin", except: [:index, :show, :new, :create]
+	#http_basic_authenticate_with name: "admin", password: "admin", except: [:index, :show, :new, :create]
 
 	# New function. Creates a new "Entry" instance
 	def new
