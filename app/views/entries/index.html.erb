@@ -1,20 +1,6 @@
-<h1 class="text-center">The Recipe Repo</h1>
-<!-- <h2 class="text-center">If we are what we eat, then I am cheap, fast, and easy (and greasy) </h2> -->
-<h2 class="text-center"><em>
-<%= headers = ["If we are what we eat, then I am cheap, fast, and easy (and greasy)!",
-"Even better than Git Hub!",
-"If I had a snarky comment, it would go here!",
-"Committing changes has never been so delicious!",
-"Segmentation fault",
-"Recipes, ruby, and rails",
-"We spent hours making up these headers.",
-"Reticulating splines!",
-"Now in perpetual Beta!",
-"Much header. So dynamic.",
-"Praise the sun! (Dark Souls meme)"]
-headers[rand(headers.length)]  %>
-</em></h2>
-	<hr/>
+<!--
+Index file. Serves as the home page for our project.
+-->
 <div id="intro" class="center">
 	<p>
 	This is a repository for recipes. You can add recipes to the database, edit existing ones, or delete them as well.
@@ -23,7 +9,8 @@ headers[rand(headers.length)]  %>
 
  <div class="text-center">
  <%= link_to 'Make a New Recipe', new_entry_path %>
-</div><br/>
+</div>
+<div id="indexheader" class="center"><h3>Recipes Index:</h3></div>
 <div class="list">
   <% @entries.each do |entry| %>
 	<div class="entry center">
