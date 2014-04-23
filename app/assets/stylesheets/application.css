@@ -85,7 +85,17 @@
 	color: red;
  }
  
+ .nolink {
+	color:#000000;
+	text-decoration:none;
+ }
+
+ 
  /* IDs */ 
  #intro {
+	width: 50%;
+ }
+ 
+ #indexheader {
 	width: 50%;
  }
