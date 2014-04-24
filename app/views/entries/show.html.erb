@@ -26,7 +26,7 @@ Shows all the data associated with each recipe (entry).
 </div>
 
 <div class="text-center">
-	<p class="links">Administration (Requires Login): <%= link_to 'Edit this Recipe', edit_entry_path(@entry) %> | <%= link_to 'Delete this Recipe', entry_path(@entry),
+	<p class="links"><%= link_to 'Edit this Recipe', edit_entry_path(@entry) %> | <%= link_to 'Delete this Recipe', entry_path(@entry),
                     method: :delete, data: { confirm: 'Are you sure you want to delete this recipe? This cannot be undone.' } %>
 	</p>
 	<p class="links"><%= link_to 'Go back to Home', entries_path %></p>
