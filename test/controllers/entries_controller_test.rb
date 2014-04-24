@@ -1,16 +1,25 @@
 require 'test_helper'
 
+# The controller/view tests
+#
+# The controller portion tests all the necessary functions in the entries controller for correctness. This includes
+# ensuring that the controller redirects to the correct page under the right circumstances
+#
+# The view tests are just checks to ensure that the routing is functioning right. It asserts that the URL will lead
+# to the right page with the right parameters.
+
 class EntriesControllerTest < ActionController::TestCase
 	#test "the truth" do
 	#	assert true
 	#end
 	
-	setup :initialize_entry
+	setup :initialize_entry # Initializes a simple test entry
 	
 	def teardown
 		@entry = nil
 	end
 	
+	## Controller testing
 	test "should create entry" do
 		assert_difference('Entry.count') do
 			post :create, entries: {name: 'Testname', description: '1234567890', ingredients: '1234567890', instructions: '1234567890'}
@@ -43,6 +52,7 @@ class EntriesControllerTest < ActionController::TestCase
 	assert_redirected_to entries_path
 	end
 	
+	## Views testing
 	test "should route to entry 1" do
 		assert_routing '/entries/1', {controller: "entries", action: "show", id: "1"}
 	end

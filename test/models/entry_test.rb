@@ -1,5 +1,8 @@
 require 'test_helper'
 
+# Various tests on the recipe (entry) model. Mostly testing the model to ensure proper validation functionality
+
+
 class EntryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
